@@ -1,0 +1,39 @@
+=link_to "＜レストラン一覧＞", restaurants_path
+%br
+%br
+-@restaurants.each do|restaurant|
+  ="名前："
+  =link_to restaurant.name, restaurant_path(restaurant)
+  %br
+  ="住所："
+  =restaurant.address
+  %br
+  ="作成日："
+  =restaurant.created_at
+  %br
+  ="更新日："
+  =restaurant.updated_at
+  %hr
+
+=link_to "新規レストラン登録", new_restaurant_path
+%br
+%br
+=link_to "＜ユーザー一覧＞", users_path   
+%br
+%br
+-@users.each do|user|
+
+  ="Name："
+  =link_to "#{user.first_name} #{user.last_name}", user_path(user)
+  %br
+  ="E-mailアドレス："
+  =user.email
+  %br
+  ="電話番号："
+  =user.telephone
+  %br
+  =link_to "編集する", edit_user_path(user)
+  =link_to "削除する", user_path(user), method: :delete, data: {confirm: "削除しますか？"}
+  %hr
+
+=link_to "ユーザー登録", new_user_path

@@ -1,0 +1,6 @@
+=@restaurant.name
+=@restaurant.address
+
+=link_to "一覧に戻る", restaurants_path
+=link_to "編集する", edit_restaurant_path(@restaurant)
+=link_to "削除する", restaurant_path(@restaurant), method: :delete, data: {confirm: "削除しますか？"}

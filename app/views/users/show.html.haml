@@ -1,0 +1,8 @@
+=@user.first_name
+=@user.last_name
+=@user.email
+=@user.telephone
+
+=link_to "一覧に戻る", users_path
+=link_to "編集する",  edit_user_path(@user)
+=link_to "削除する", user_path(@user), method: :delete, data: {confirm: "本当にいいですか？"}
